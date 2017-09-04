@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo List</title>
+  <script type="text/javascript" src="./index.js"></script>
+  <style media="screen">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-width: 200px;
+    color: #333;
+    overflow: hidden;
+    margin: 0px;
+    padding: 10px;
+    background: white;
+    font-size: 12px;
+  }
+
+  img {
+    margin: 0 4px;
+  }
+
+  #addItemDiv {
+    color: #ccc;
+    height: 20px;
+  }
+  .taskDate {
+    color: red;
+    font-weight: 600;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+  .taskTitle {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .taskItem {
+    cursor: pointer;
+    padding: 2px 0;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  label.on {
+    width: 12px;
+    display: inline-block;
+    height: 12px;
+    margin-right: 5px;
+    background: url(./images/unfinish.png) no-repeat 0px 2px;
+    background-size: 10px 10px;
+  }
+
+  label.off {
+    width: 12px;
+    display: inline-block;
+    height: 12px;
+    background: url(./images/完成.png) no-repeat 0px 2px;
+    background-size: 10px 10px;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="addItemDiv">添加新项</div>
+  <div id="addItemInput" class="hide"><input type="text" id="txtTaskTitle" /></div>
+  <div id="taskItemList"></div>
+</body>
+
+</html>
