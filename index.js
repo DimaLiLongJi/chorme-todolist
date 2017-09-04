@@ -111,6 +111,14 @@ window.onload = function() {
             lbl.className = (lbl.className == 'on') ? 'off' : 'on';
             Tasks.Edit(task);
           } else {
+            task.is_finished = !task.is_finished;
+            var lbl = this.getElementsByTagName('label')[0];
+            lbl.className = (lbl.className == 'on') ? 'off' : 'on';
+            Tasks.Edit(task);
+          }
+        }, true);
+        oDiv.addEventListener('dblclick', function() {
+          if (task.is_finished) {
             Tasks.Del(task);
             Tasks.RemoveHtml(task);
           }
