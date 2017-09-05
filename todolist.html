@@ -42,8 +42,8 @@
     display: block;
   }
   .taskTitle {
-    display: inline-block;
-    margin-left: 5px;
+    display: block;
+    margin-left: 18px;
   }
   .taskItem {
     cursor: pointer;
@@ -61,6 +61,9 @@
     margin-right: 5px;
     background: url(./images/unfinish.png) no-repeat 0px 2px;
     background-size: 10px 10px;
+  }
+  label.off ~ .taskTitle{
+    color: #989898;
   }
 
   label.off {
