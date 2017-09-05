@@ -42,8 +42,8 @@
     display: block;
   }
   .taskTitle {
-    display: inline-block;
-    margin-left: 5px;
+    display: block;
+    margin-left: 18px;
   }
   .taskItem {
     cursor: pointer;
@@ -62,6 +62,9 @@
     background: url(./images/unfinish.png) no-repeat 0px 2px;
     background-size: 10px 10px;
   }
+  label.off ~ .taskTitle{
+    color: #989898;
+  }
 
   label.off {
     width: 12px;
@@ -77,7 +80,9 @@
 <body>
   <div id="addItemDiv">添加新项</div>
   <div id="addItemInput" class="hide"><input type="text" id="txtTaskTitle" /></div>
-  <div id="taskItemList"></div>
+  <div id="taskItemList">
+    <div class="x"></div>
+  </div>
 </body>
 
 </html>
