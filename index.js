@@ -38,10 +38,9 @@ window.onload = function() {
             var task = {
               id: 0,
               task_item: $('txtTaskTitle').value,
-              add_time: new Date().getFullYear() + '-' + new Date()
-                .getMonth() +
-                '-' + new Date().getDate(),
-              is_finished: false
+              add_time: `${new Date().getFullYear()}-${new Date()
+                .getMonth()+1}-${new Date().getDate()}`,
+              is_finished: false,
             };
             Tasks.Add(task);
             Tasks.AppendHtml(task);
